@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep  3 14:28:16 2025
+Created on Wed Sep  3 14:28:16 2023
 
 @author: beckylin
 """
@@ -12,7 +12,7 @@ import os
 
 # Settings
 PORT = 'COM16'
-BAUDRATE = 115200
+BAUDRATE = 250000
 DATA_DIR = './vibration_data'
 
 def create_csv():
@@ -57,3 +57,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
