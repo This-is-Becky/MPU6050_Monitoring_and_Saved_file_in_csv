@@ -9,4 +9,4 @@
 
 ## CSV result
 
-<img width="417" height="262" alt="image" src="https://github.com/user-attachments/assets/994eee22-ddae-4233-b02a-636fcb518e42" />
+<img width="205" height="131" alt="image" src="https://github.com/user-attachments/assets/994eee22-ddae-4233-b02a-636fcb518e42" />
