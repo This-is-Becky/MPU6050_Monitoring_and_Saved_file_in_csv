@@ -24,7 +24,8 @@ void setup() {
   }
 
   Serial.println("Found a MPU-6050 sensor");
-
+  
+//Range : ±2g, ±4g, ±8g, and ±16g.
   mpu.setAccelerometerRange(MPU6050_RANGE_2_G);
 
 }
@@ -32,8 +33,8 @@ void setup() {
 void loop() {
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
-  //列出加速度值
-//  Serial.print(" X,Y,Z= ");
+  
+  //visualized the data
   Serial.print(a.acceleration.x);
   Serial.print(",");
   Serial.print(a.acceleration.y);
@@ -43,3 +44,4 @@ void loop() {
 
 
 }
+
