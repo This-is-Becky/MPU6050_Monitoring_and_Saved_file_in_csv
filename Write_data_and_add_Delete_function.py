@@ -60,7 +60,7 @@ def main():
                 if len(parts) > 1:
                     data = parts[1].split(',')
                     writer.writerow([timestamp] + data)
-                    csvfile.flush()
+                    file.flush()
 
             # Rotate file every minute
             if datetime.now().strftime('%Y%m%d%H%M') != file_time.strftime('%Y%m%d%H%M'):
@@ -77,4 +77,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
