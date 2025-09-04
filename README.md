@@ -34,6 +34,12 @@ if datetime.now().strftime('%Y%m%d%H%M') != file_time.strftime('%Y%m%d%H%M'):
 - Directory Management to automatically creates folders based on the current date under ./vibration_data/.
 `def create_csv():` which creates a new folder every day, and a new file every minute.
 
+-  **`flush()`** function:
+The flush() method is used to force the writing of buffered data to disk. When you write to a file, Python doesn't immediately save that data to the file — it stores it in a temporary memory area called a buffer. `flush()` clears that buffer and writes everything to the file right away.
+   - To ensure data is saved immediately, especially in real-time applications like sensor logging.
+   - To prevent data loss if the program crashes or is interrupted.
+   - To see updates in the file instantly, useful for monitoring or debugging.
+
 ## Write-in Data-CSV result
 
 <img width="205" height="131" alt="image" src="https://github.com/user-attachments/assets/994eee22-ddae-4233-b02a-636fcb518e42" />
