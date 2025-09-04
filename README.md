@@ -32,7 +32,7 @@ if datetime.now().strftime('%Y%m%d%H%M') != file_time.strftime('%Y%m%d%H%M'):
                 file, writer, file_time = create_csv()
 ```
 - Directory Management to automatically creates folders based on the current date under ./vibration_data/.
-`def create_csv():`
+`def create_csv():` which creates a new folder every day, and a new file every minute.
 
 ## CSV result
 
