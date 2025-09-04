@@ -34,6 +34,19 @@ if datetime.now().strftime('%Y%m%d%H%M') != file_time.strftime('%Y%m%d%H%M'):
 - Directory Management to automatically creates folders based on the current date under ./vibration_data/.
 `def create_csv():` which creates a new folder every day, and a new file every minute.
 
-## CSV result
+## Wrie-in Data-CSV result
 
 <img width="205" height="131" alt="image" src="https://github.com/user-attachments/assets/994eee22-ddae-4233-b02a-636fcb518e42" />
+
+## Add-in Delete file function
+The **"Write_data_and_add_Delete_function.py"** is adding a delete function to prevent excessive storage usage, keeping the storage organized and efficient without manual intervention.
+
+`def delete_folder():`
+
+- This will scans the directory for subfolders named by date (e.g., 20230903).
+- Keeps only the most recent 30 folders.
+- If there are more than 30 folders, it:
+   - Sorts them by date (oldest first).
+   - Deletes the oldest folder to maintain the limit.
+     
+
