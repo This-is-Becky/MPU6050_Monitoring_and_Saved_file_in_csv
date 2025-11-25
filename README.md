@@ -56,3 +56,19 @@ The **"Write_data_and_add_Delete_function.py"** is adding a delete function to p
    - Deletes the oldest folder to maintain the limit.
      
 
+## Comparison Table
+
+
+| Aspect        | Direct Collect.py      | Write Data.py      |
+|---------------|---------------|---------------|
+| Purpose    | Collect vibration data interactively with a user-defined filename.    | Continuous data logging with automatic file rotation and folder cleanup.    |
+| User Interaction    | Prompts user via tkinter.simpledialog to enter a filename.    | No user input; filenames are auto-generated based on timestamp.    |
+|Folder Management|Creates folder for current date if missing.|Creates folder for current date and deletes oldest folder if >30 exist.|
+|Display|Prints samples per second every second.|Prints timestamp and raw line data; no sampling rate calculation.|
+|Data Validation|Checks if line splits into 2 parts (key=value).|Checks if line length ≥ 20 and splits into parts.|
+|File Rotation|None; single file for entire session.|Rotates file every minute (new CSV created).|
+|Buffer Handling|Flushes serial buffer before reading.|No explicit buffer flush.|
+|Shutdown Handling|Closes serial and file on KeyboardInterrupt.|Same, but also flushes file after each write.|
+|Use Case|Good for short, controlled experiments.| long-term, automated data collection without user intervention.|
+
+
